@@ -1,4 +1,4 @@
-# Sourcery and gcsfuse won't run on `arm` so force the use of `amd64` for the base image.
+# Sourcery won't run on `arm` so force the use of `amd64` for the base image.
 FROM --platform=linux/amd64 mcr.microsoft.com/devcontainers/base:jammy
 
 # Install uv for everyone not just the current user.
