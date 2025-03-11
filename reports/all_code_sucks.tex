@@ -1,0 +1,39 @@
+\documentclass{beamer}
+% \setbeameroption{show only notes}
+
+\setbeamercolor{note page}{bg=white}
+\setbeamercolor{note title}{bg=white}
+
+\usepackage{graphicx}
+
+\newcommand{\bigpicture}[1]{% 
+  \begin{list}{}{% 
+    \vspace*{-0.6cm}% Top to nothing
+    % \setlength{\topsep}{-0pt}% Doesn't matter
+    \setlength{\leftmargin}{-1.0cm}% RHS to nothing
+    % \setlength{\rightmargin}{0pt}% Doesn't matter
+    \setlength{\listparindent}{\parindent}% 
+    \setlength{\itemindent}{\parindent}% 
+    \setlength{\parsep}{\parskip}% 
+  }%   
+  \item[]%
+  \vspace*{\fill}
+    \includegraphics[width=\paperwidth, height=\paperheight,]{#1}% values taken from the PDF
+  \vspace*{\fill}
+  \end{list}%
+}%
+        
+\begin{document}
+\title{All Code Sucks}
+\date{21 March 2024} 
+
+\begin{frame}
+  \bigpicture{images/test_card.jpg}
+  \note{
+    \begin{itemize}
+      \item 
+    \end{itemize}
+  }
+\end{frame}
+
+\end{document}
