@@ -1,6 +1,8 @@
 {
 	"name": "alan_tracy",
-	"image": "ghcr.io/joejcollins/alan-tracy:latest",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 	"customizations": {
 		"vscode": {
 			"settings": {
