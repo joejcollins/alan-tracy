@@ -1,39 +1,64 @@
-\documentclass{beamer}
+\documentclass[bigger]{beamer}
 % \setbeameroption{show only notes}
-
 \setbeamercolor{note page}{bg=white}
 \setbeamercolor{note title}{bg=white}
 
-\usepackage{graphicx}
+\setbeamersize{text margin left=1cm, text margin right=1cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}{\textbullet}
 
-\newcommand{\bigpicture}[1]{% 
-  \begin{list}{}{% 
-    \vspace*{-0.6cm}% Top to nothing
-    % \setlength{\topsep}{-0pt}% Doesn't matter
-    \setlength{\leftmargin}{-1.0cm}% RHS to nothing
-    % \setlength{\rightmargin}{0pt}% Doesn't matter
-    \setlength{\listparindent}{\parindent}% 
-    \setlength{\itemindent}{\parindent}% 
-    \setlength{\parsep}{\parskip}% 
-  }%   
-  \item[]%
-  \vspace*{\fill}
-    \includegraphics[width=\paperwidth, height=\paperheight,]{#1}% values taken from the PDF
-  \vspace*{\fill}
-  \end{list}%
-}%
+
+
+\usepackage{graphicx}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault} % Sans-serif font like Arial
+
+% \usebackgroundtemplate%
+% {%
+%   \includegraphics[width=\paperwidth,height=\paperheight]{images/test_card.jpg}%
+% }
         
 \begin{document}
 \title{All Code Sucks}
+\subtitle{Why Bad Code is Everywhere and What to Do About It}
+
+\author{Joe J Collins \\
+  \href{mailto:j.collins@zengenti.com}{j.collins@zengenti.com} \\ 
+  \href{https://linkedin.com/in/joejcollins}{linkedin.com/in/joejcollins}
+}
+        
+\institute{\includegraphics[height=1.5cm]{images/zengenti.png}}
+
+\date{\today}
 \date{21 March 2024} 
 
-\begin{frame}
-  \bigpicture{images/test_card.jpg}
-  \note{
-    \begin{itemize}
-      \item 
-    \end{itemize}
-  }
+\frame{\titlepage}
+
+\begin{frame}{What is sucky code?}
+  \framesubtitle{}
+  \begin{quote}
+    ``Programs are meant to be read by humans and
+only incidentally for computers to execute.''\\
+\hfill --- Donald Knuth
+\end{quote}
+\bigskip
+\begin{quote}
+``Legacy code is simply code without tests.''\\
+\hfill ---Michael Feathers
+  \end{quote}
+\end{frame}
+
+\begin{frame}{The Great Hunt for Non Sucky Code}
+\includegraphics[width=\textwidth]{images/companies.png}
+\end{frame}
+
+\begin{frame}{What is sucky code?}
+  \framesubtitle{This is a subtitle for this slide}
+\begin{itemize}
+  \item First Point
+  \item Second Point
+  \item Third Point
+\end{itemize}
 \end{frame}
 
 \end{document}

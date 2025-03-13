@@ -9,6 +9,19 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,
     },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.aux": true,
+        "**/*.nav": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/*.out": true,
+        "**/*.synctex.gz": true,
+        "**/*.snm": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true,
+      },
+    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
