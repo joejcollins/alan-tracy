@@ -7,8 +7,6 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{itemize items}{\textbullet}
 
-
-
 \usepackage{graphicx}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault} % Sans-serif font like Arial
@@ -23,42 +21,78 @@
 \subtitle{Why Bad Code is Everywhere and What to Do About It}
 
 \author{Joe J Collins \\
-  \href{mailto:j.collins@zengenti.com}{j.collins@zengenti.com} \\ 
+  \href{mailto:j.collins@zengenti.com}{j.collins@zengenti.com} \\
   \href{https://linkedin.com/in/joejcollins}{linkedin.com/in/joejcollins}
 }
-        
+
 \institute{\includegraphics[height=1.5cm]{images/zengenti.png}}
 
 \date{\today}
-\date{21 March 2024} 
+\date{21 March 2024}
 
 \frame{\titlepage}
+
+
 
 \begin{frame}{What is sucky code?}
   \framesubtitle{}
   \begin{quote}
     ``Programs are meant to be read by humans and
-only incidentally for computers to execute.''\\
-\hfill --- Donald Knuth
-\end{quote}
-\bigskip
-\begin{quote}
-``Legacy code is simply code without tests.''\\
-\hfill ---Michael Feathers
+    only incidentally for computers to execute.''\\
+    \hfill --- Donald Knuth
+  \end{quote}
+  \bigskip
+  \begin{quote}
+    ``Legacy code is simply code without tests.''\\
+    \hfill ---Michael Feathers
   \end{quote}
 \end{frame}
 
 \begin{frame}{The Great Hunt for Non Sucky Code}
-\includegraphics[width=\textwidth]{images/companies.png}
+  \includegraphics[width=\textwidth]{images/companies.png}
 \end{frame}
 
-\begin{frame}{What is sucky code?}
-  \framesubtitle{This is a subtitle for this slide}
-\begin{itemize}
-  \item First Point
-  \item Second Point
-  \item Third Point
-\end{itemize}
+\begin{frame}{Why Code Sucks}
+  \framesubtitle{The statistics favour of suck}
+  \begin{itemize}
+    \item Regression (50\% of everything is below average)
+          \pause
+    \item Sturgeon's Revelation (90\% of everything is shit)
+          \pause
+    \item The 2 Year Old Programmer Problem (inexperience)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Why Code Sucks}
+  \framesubtitle{Organisations tend to suck}
+  \begin{itemize}
+    \item Structure of Software Startups (early school leaver syndrome)
+          \pause
+    \item Summer Student Projects (unsupervised use of new technology)
+          \pause
+    \item Prototypes in Production (commercial imperative)
+          \pause
+    \item Agile (as an excuse for sucky code)
+          \pause
+    \item New projects = New programmers (NASA example)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Why Code Sucks}
+  \framesubtitle{Psycho Suck}
+  \begin{itemize}
+    \item Availability bias (you only ever look at the bad code)
+    \pause
+    \item The Illusion of Explanatory Depth (everything is simple until you look)
+    \pause
+    \item Parkinson's Law of Triviality (judging software design=nuclear reactor)
+    \pause
+    \item The Lake Wobegon Effect (we all think we are above average)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{What Not To Do}
+  \includegraphics[width=\textwidth]{images/code-mocking.gif}
 \end{frame}
 
 \end{document}
