@@ -251,3 +251,6 @@ acs-*.bib
 
 # Gitpod Flex
 core
+
+# Mac Desktop Services Store
+.DS_Store
