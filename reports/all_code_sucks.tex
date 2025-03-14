@@ -39,12 +39,12 @@
 
 \begin{frame}[plain]
   \titlepage
-  \note{Thanks for taking the time to join me tonight.\\
+  \note{Thanks for taking the time to come out tonight.\\
     I'm Big Joe from Zengenti.\\
     We are a small company in Shropshire. About 70 nerds.\\
     We do websites for universities and local authorities.\\
     I don't actually do any websites, I work in the hosting team.\\
-    We maintain a private cloud to run websites.\\
+    We maintain a private cloud to run the websites.\\
     We use a combination of Ansible and Python\\
     maintaining about 3000 servers.\\
     But, tonight Matthew,\\
@@ -69,7 +69,7 @@
     than crap code that does.''\\
     \hfill --- Robert C. Martin
   \end{quote}
-  \note{My short answer is \dots \textbf{code that is hard to read}.\\
+  \note{My short answer is \dots \textbf{sucky code is hard to read}.\\
     No need take my word for it.\\
     Donald Knuth, the Yoda of Computer Science\\
     says that code is for humans to read\\
@@ -80,7 +80,7 @@
     He uses the term clean code.\\
     It is really a proxy for readability.\\
     He's says that readability is more important than working code.\\
-    If you and understand it, then you can fix it,\\
+    If you can understand it, then you can fix it,\\
     but if you can't understand it and it breaks, you can't fix it.
   }
 \end{frame}
@@ -89,15 +89,15 @@
   \includegraphics[width=\textwidth]{images/companies.png}
   \note{For about about 25 years now,\\
     I have been looking for code that doesn't suck.\\
-    And trying to produce code that didn't suck.\\
-    I have worked with scumbags and saints.\\
-    And in companies both big and small.\\
+    And trying to produce code that doesn't suck.\\
+    I've in companies both big and small.\\
+    Worked with scumbags and saints.\\
     But pretty much all the code sucked.
     \vfil
     Maybe I just got unlucky.\\
-    But I think I seeing a pattern.\\
+    But I think I am seeing a pattern here.\\
     Maybe I should stop looking for the perfect code.\\
-    And instead admit that all code sucks.\\
+    Maybe I should admit that all code sucks.\\
     And I should work out what to do about it.
     \vfil
     This does beg the question, why does it all suck?
@@ -125,27 +125,27 @@
     to realize that.
   }
   \note<2>{Then there is Sturgeon's Law.\\
-    Strugeon was explaining why most science fiction is low quality.\\
-    And came up with the pithy response\\
+    Sturgeon was explaining why most science fiction is low quality.\\
+    And came up with the pithy answer\\
     ``90\% of everything is shit''.\\
     The observation works here too.\\
     Only some things are really good.\\
-    Put another way most of anything isn't good.
+    Or put another way most of anything is bad.
   }
   \note<3>{
-    Then an issue perculiar to the programming business.\\
+    Then there's an issue peculiar to the programming business.\\
     The demand for programmers for the last 25 years\\
     has always outstripped supply.\\
     When I started out\\
     the average programmers experience was 3 years.\\
     And that hasn't changed.\\
     As more and more people have entered the business\\
-    then have kept the average age down.\\
+    they have kept the average experience down.\\
     There are a few old hands around but\\
     as a group we still don't have that much experience.
     \vfil
     So if the odds are against us\\
-    maybe the organisations we work for will help.\\
+    maybe the organizations we work for will help.\\
     Well perhaps not.
   }
 \end{frame}
@@ -171,7 +171,7 @@
     The dad is the salesman.\\
     And the son is the programmer,\\
     who's typically been excluded from school for some reason.\\
-    Writing readable code is not on their agenda.\\
+    Writing readable code isn't really on their agenda.\\
     In fact reading plain English is not on their agenda.\\
     The third employee?\\
     The son's best mate from school who was also excluded.
@@ -183,7 +183,7 @@
     All the experienced programmers are on holiday or busy.\\
     So they give the new technology to the summer students,\\
     who give it a go.\\
-    If it runs they put it into production.
+    And if it runs they put it into production.
   }
   \note<3>{
     This last point is also a general point.\\
@@ -197,20 +197,21 @@
     And lives forever.
   }
   \note<4>{
-    So, say you start a new project,\\
+    So,\\
+    say you start a new project,\\
     well resourced with all the best intentions.\\
-    The organisation is still against you.\\
+    The organization is still against you.\\
     Who is available to work on the project?\\
-    Anyone who is new or is on the bench.\\
+    Anyone who is new or is anyone whose on the bench.\\
     This isn't necessarily a bad thing.\\
     The average age of the team that\\
     helped put Neil Armstrong to the moon was 28.\\
-    But they were all new to the business.\\
+    But they were all new graduate engineers.\\
     The experienced engineers all had jobs\\
     and why take a risk on a new project?
   }
   \note<5>{
-    Then there is Agile Management Practice \ldots\\
+    Then there is \textbf{Agile Management Practice} \ldots\\
     it was such a great idea.\\
     We should respond to change over following the plan.\\
     It didn't say we shouldn't plan.\\
@@ -221,6 +222,7 @@
     Just start programming!
     \vfil
     And as if this wasn't bad enough,\\
+    just to make you feel completely hopeless,\\
     I would say that suck is actually built into human psychology.
   }
 \end{frame}
@@ -237,7 +239,7 @@
   \note<1>{
     I think I am an intelligent person.\\
     I think I can understand most things.\\
-    But my understanding is only a deep as it is.\\
+    But my understanding is only a deep as it actually is.\\
     I am completely unaware of my ignorance.\\
     Because I am ignorant of it.\\
     I believe I understand things more than I do.\\
@@ -250,35 +252,45 @@
     Named after the fictional town,\\
     where all the women are strong, all the men are good-looking,\\
     and all the children are above average.\\
-    93\% of drivers rate themselves in the top 50\% of driving ability.\\
+    90\% of drivers rate themselves in the top 50\% of driving ability.\\
     I think the code I write is above average.\\
     but is probably isn't.
     \vfil
     My judgement is clouded by my own ego.
     }
   \note<3>{
-    A couple of years ago we used a code analysis tool on our code.\\
-    To my surprise is said most of the code as good.\\
+    There is a chance that I have seen non sucky code.\\
+    But I can't remember it.\\
+    A couple of years ago we used a static analysis tool on our code.\\
+    To my surprise is said most of the code was good.\\
     But it pointed to the five worst files.\\
-    Those were the files I spent most of my time working on.\\
-    If by some miracle your code is great,\\
-    you will only ever work on the bad code.\\
+    Those were the files I spend most of my time working on.\\
+    If by some miracle the code is good,\\
+    you will only ever work on the bad bits.\\
     Those will be the bits you remember.\\
-    For practical purposes you will only ever see the bad code.\\
     So you think all code sucks.
     \vfil
-    So what to do about it?
+    So what we to do about it?
   }
 \end{frame}
 
 \begin{frame}{What Not To Do}
-  \framesubtitle{}
+  \framesubtitle{Ritual Code Mocking}
   \includegraphics[width=\textwidth]{images/code-mocking.png}
-  \note{What not to do is the ritual code mocking.\\
-    Everyone is doing their very best\\
-    with the time, resources and knowledge they have.\\
-    If we assume the code will suck and we just have to work with it.\\
-  Then we can start to work out what to do about it.}
+  \note{Ritual code mocking is good fun\\
+    and a great way to let off steam\\
+    but it is actively harmful to team morale.\\
+    But that is a whole other talk for another day.\\
+    We have to remember that\\
+    everyone that worked on the code
+    did their very best \\
+    with the time, resources and knowledge they had.\\
+    If we can't read the code\\
+    we have to find a way to work with it.
+    \vfil
+    So I am going to show you just a couple of techniques\\
+    we use at Zengenti to work with sucky code.
+    }
 \end{frame}
 
 \begin{frame}{What To Do}
@@ -306,7 +318,17 @@
   \bigskip
   \note{To quote Moneyball,\\
     the challenge is both easy and difficult.\\
-    Taken
+    The example was one function and one file.\\
+    But the code we are working with has 3500 files.\\
+    Some is hard to read,\\
+    some has been improved and some it half way between.\\
+    But it often feels like we have three different code bases.\\
+    All jumbled up.
+    \vfil
+    It turns out the improving code is easy\\
+    but managing the process is hard.\\
+    Knowing which bits to improve really hard.\\
+    I have no answer to that, I am kind of hoping you do.
   }
 \end{frame}
 
@@ -315,6 +337,16 @@
   {\Huge \bfseries Thank You!}\\[1cm]
   {\large Joe J Collins} \\[0.5cm]
   \includegraphics[height=1.5cm]{images/zengenti.png}
+  \note{Thank you for listening.\\
+    I'm Big Joe from Zengenti.\\
+    If you thought this was interesting,\\
+    and would like to work with us,\\
+    please get in touch.\\
+    If you think you have a better way to work with sucky code,\\
+    I'm all ears.\\
+    Or if you have an idea how to manage the process,\\
+    Let's talk.
+  } 
 \end{frame}
 
 \end{document}
