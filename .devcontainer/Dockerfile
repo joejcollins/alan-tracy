@@ -14,6 +14,7 @@ RUN apt-get --quiet update \
 # Install Rust using rustup so we can have tex-fmt.
 # Once Debian trixie is available tex-fmt can be installed as a package.
 RUN curl  --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
 RUN cargo install tex-fmt
 
 # Add some labels so it looks nice in Github packages.
