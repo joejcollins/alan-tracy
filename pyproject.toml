@@ -1,7 +1,7 @@
 [project]
 name = "alan_tracy"
 version = "0.1.0"
-description = "The realm of the dead where those who die a dishonorable death are forced to remain."
+description = "Why bad code is everywhere and what to do about it."
 authors = [{ name = "Joe J Collins" }]
 license = { file = "LICENSE" }
 readme = "README.md"
@@ -34,7 +34,7 @@ repository = "https://github.com/joejcollins/alan_tracy"
 
 [tool.pytest.ini_options]
 log_cli = false
-addopts = "-q --disable-warnings --cache-clear"
+addopts = ["-q", "--disable-warnings", "--cache-clear"]
 testpaths = ["./tests"]
 
 [tool.ruff]

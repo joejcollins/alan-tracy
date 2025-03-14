@@ -6,9 +6,19 @@
         "alan_tracy",
         "debugpy",
         "dotenv",
+        "ipykernel",
+        "ipympl",
+        "loguru",
+        "matplotlib",
+        "mkdocs",
         "mypy",
+        "nbconvert",
+        "numpy",
         "pycache",
         "pyright",
-        "Sourcery"
+        "pytest",
+        "Sourcery",
+        "testpaths",
+        "tqdm"
     ]
 }
