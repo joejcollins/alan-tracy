@@ -3,11 +3,14 @@
     "language": "en",
     "words": [
         "abcdefghijklmnopqrstuvwxyz",
+        "addopts",
         "alan_tracy",
+        "Beane",
         "debugpy",
         "dotenv",
         "ipykernel",
         "ipympl",
+        "latexmk",
         "loguru",
         "matplotlib",
         "mkdocs",
@@ -18,7 +21,9 @@
         "pyright",
         "pytest",
         "Sourcery",
+        "sucky",
         "testpaths",
+        "texlive",
         "tqdm"
     ]
 }
