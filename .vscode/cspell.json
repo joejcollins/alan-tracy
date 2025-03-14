@@ -3,11 +3,12 @@
     "language": "en",
     "words": [
         "abcdefghijklmnopqrstuvwxyz",
+        "alan_tracy",
         "debugpy",
         "dotenv",
-        "alan_tracy",
         "mypy",
         "pycache",
-        "pyright"
+        "pyright",
+        "Sourcery"
     ]
 }
