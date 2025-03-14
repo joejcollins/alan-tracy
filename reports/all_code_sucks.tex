@@ -14,28 +14,33 @@
 \setbeamerfont{framesubtitle}{size=\Large}
 % \setbeamerfont{note page}{size=\footnotesize}
 
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hfill
+  \includegraphics[height=0.5cm]{images/zengenti.png} % Adjust the height as needed
+  \hspace{1em}
+  \vspace{1em}
+}
+
 % \usebackgroundtemplate%
 % {%
 %   \includegraphics[width=\paperwidth,height=\paperheight]{images/test_card.jpg}%
 % }
-        
+
 \begin{document}
 \title{All Code Sucks}
 \subtitle{Why Bad Code is Everywhere and What to Do About It}
-
 \author{Joe J Collins \\
   \href{mailto:j.collins@zengenti.com}{j.collins@zengenti.com} \\
   \href{https://linkedin.com/in/joejcollins}{linkedin.com/in/joejcollins}
 }
-
 \institute{\includegraphics[height=1.5cm]{images/zengenti.png}}
-
-\date{\today}
 \date{21 March 2024}
 
-\begin{frame}
+\begin{frame}[plain]
   \titlepage
-  \note{I'm Joe Collins, I'm from Zengenti, in Shropshire.\\
+  \note{I'm Joe Collins, I'm from Zengenti.\\
+    We are n Shropshire.\\
     We do websites for universities and local authorities.\\
     I don't actually do any websites, I work in the hosting team.\\
     We maintain the cloud on which the websites run.\\
@@ -46,7 +51,8 @@
     \vfil
     We all know what good code looks like,\\
     or at least we think we do.\\
-    But I should probably define what I mean by sucky code.\\}
+    But I should probably define what I mean by sucky code.\\
+  }
 \end{frame}
 
 \begin{frame}{What is sucky code?}
@@ -91,22 +97,22 @@
     And that I should stop looking for the perfect code.\\
     And instead admit that all code sucks.\\
     And then work out what to do about it.\\
-    Why does it all suck?}
+  Why does it all suck?}
 \end{frame}
 
 \begin{frame}{Why Code Sucks}
-  \framesubtitle{The statistics favour of suck}
+  \framesubtitle{The statistics favour suck}
   \begin{itemize}
     \item Half of everything is below average
-          \pause
+      \pause
     \item Sturgeon's Revelation
-          \pause
+      \pause
     \item The 2 Year Old Programmer Problem
   \end{itemize}
   \note<1>{
     Straight out of the gate, half of everything it below average.\\
     Well below the median.\\
-    You don't have to be Francis Galton to realize that.}
+  You don't have to be Francis Galton to realize that.}
   \vfil
   \note<2>{Then there is Sturgeon's law or revelation\\
     or whatever you want to call it.\\
@@ -114,7 +120,7 @@
     He was talking about science fiction at the time\\
     but it works in this situation.\\
     Only some things are really good.\\
-    Put another way most stuff isn't that good.}
+  Put another way most stuff isn't that good.}
   \note<3>{
     Then an issue perculiar to the programming business,\\
     the demand for programmers over the last 25 years has always outstripped supply.\\
@@ -131,13 +137,13 @@
   \framesubtitle{Organisations tend to suck}
   \begin{itemize}
     \item Structure of Software Startups
-          \pause
+      \pause
     \item Summer Student Projects
-          \pause
+      \pause
     \item Prototypes in Production
-          \pause
+      \pause
     \item The Agile Manifesto
-          \pause
+      \pause
     \item New projects = New programmers
   \end{itemize}
   \note<1>{
@@ -153,21 +159,21 @@
     to read and contemplate.\\
     Turning to an authority is not on their agenda.\\
     The third employee?\\
-    The son's best mate from school who was also excluded.}
+  The son's best mate from school who was also excluded.}
   \note<2>{
     The other kind of startup that occurs in big companies.\\
     The summer student project.\\
     Alternatively called the unsupervised use of new technology.\\
     All the experienced programmers are on holiday or busy.\\
     So they give the new technology to the summer students to have a go.\\
-    If it runs they put it into production.}
+  If it runs they put it into production.}
   \note<3>{
     Which brings us to another organisational imperative.\\
     Everyone agrees that the prototype will be thrown away.\\
     Then we will build the real thing.\\
     It never is.\\
     It is always put into production.\\
-    And lives forever.}
+  And lives forever.}
   \note<4>{
     Then there is Agile
     I was there 25 years ago\\
@@ -189,11 +195,11 @@
   \framesubtitle{Psycho Suck}
   \begin{itemize}
     \item Availability bias
-          \pause
+      \pause
     \item The Illusion of Explanatory Depth
-          \pause
+      \pause
     \item Parkinson's Law of Triviality
-          \pause
+      \pause
     \item The Lake Wobegon Effect
   \end{itemize}
   \note<1>{
@@ -202,19 +208,19 @@
     You never look at the good code.\\
     You never look at the code that works.\\
     You only ever look at the code that doesn't work.\\
-    So you think all code sucks.}
+  So you think all code sucks.}
   \note<2>{
     The Illusion of Explanatory Depth.\\
     Everything is simple until you look.\\
     You think you know how it works.\\
     But you don't.\\
     You think you know how it works.\\
-    But you don't.}
+  But you don't.}
   \note<3>{
     Parkinson's Law of Triviality.\\
     Judging software design=nuclear reactor.\\
     We all think we are above average.\\
-    We all think we are above average.}
+  We all think we are above average.}
 \end{frame}
 
 \begin{frame}{What Not To Do}
@@ -226,7 +232,7 @@
     Everyone is doing their very best\\
     with the time, resources and knowledge they have.\\
     If we assume the code will suck and we just have to work with it.\\
-    Then we can start to work out what to do about it.}
+  Then we can start to work out what to do about it.}
 \end{frame}
 
 \begin{frame}{What To Do}

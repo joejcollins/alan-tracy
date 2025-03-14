@@ -21,7 +21,7 @@
         "**/*.fls": true,
         "**/*.fdb_latexmk": true,
       },
-    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latex": "tex-fmt",
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
