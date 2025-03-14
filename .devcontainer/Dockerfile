@@ -11,18 +11,6 @@ RUN apt-get --quiet update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-# Install Rust using rustup and set for all users so we can have tex-fmt.
-# Once Debian trixie is available tex-fmt can be installed as a package.
-RUN curl  --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
- && mkdir -p /usr/local/cargo /usr/local/rustup \
- && mv /root/.cargo/* /usr/local/cargo/ \
- && rm -rf /root/.cargo /root/.rustup \
- && ln -s /usr/local/cargo/bin/* /usr/local/bin/
- ENV CARGO_HOME=/usr/local/cargo
- ENV RUSTUP_HOME=/usr/local/rustup
- ENV PATH="/usr/local/cargo/bin:${PATH}"
-RUN cargo install tex-fmt
-
 # Add some labels so it looks nice in Github packages.
 LABEL org.opencontainers.image.source=https://github.com/joejcollins/alan_tracy
 LABEL org.opencontainers.image.description="alan_tracy image."
