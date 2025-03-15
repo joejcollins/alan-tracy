@@ -19,12 +19,14 @@
         "nbconvert",
         "numpy",
         "pycache",
+        "pyproject",
         "pyright",
         "pytest",
         "Sourcery",
         "sucky",
         "testpaths",
         "texlive",
-        "tqdm"
+        "tqdm",
+        "venv"
     ]
 }

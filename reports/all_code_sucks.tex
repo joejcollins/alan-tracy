@@ -1,5 +1,5 @@
 \documentclass[bigger]{beamer}
-% \setbeameroption{show only notes}
+\setbeameroption{show only notes}
 \setbeamercolor{note page}{bg=white}
 \setbeamercolor{note title}{bg=white}
 
@@ -110,9 +110,9 @@
   \begin{itemize}
     \item Half of everything is below average
       \pause
-    \item Sturgeon's Revelation
+    \item Sturgeon's Law
       \pause
-    \item The 2 Year Old Programmer Problem
+    \item The 3 Year Old Programmer
   \end{itemize}
   \note<1>{
     On the whole I think the odds are against us.\\
@@ -159,10 +159,10 @@
     \item Summer Student Projects
       \pause
     \item Prototypes in Production
-      \pause
-    \item The New Project Effect
-      \pause
-    \item The Agile Manifesto
+    %   \pause
+    % \item The New Project Effect
+    %   \pause
+    % \item The Agile Manifesto
   \end{itemize}
   \note<1>{
     The romantic image of a software startup is\\
@@ -198,36 +198,36 @@
     It is always put into production.\\
     And lives forever.
   }
-  \note<4>{
-    So,\\
-    say you start a new project,\\
-    well resourced with all the best intentions.\\
-    The organization is still against you.\\
-    Who is available to work on the project?\\
-    Anyone who is new or is anyone whose on the bench.\\
-    This isn't necessarily a bad thing.\\
-    The average age of the team that\\
-    helped put Neil Armstrong to the moon was 28.\\
-    But they were all new graduate engineers.\\
-    The experienced engineers all had jobs\\
-    and why take a risk on a new project?
-  }
-  \note<5>{
-    Then there is \textbf{Agile Management Practice} \ldots\\
-    it was such a great idea.\\
-    That we should respond to change over following the plan.\\
-    It didn't say we shouldn't plan.\\
-    But I was there 25 years ago,\\
-    I was there the day the strength of Men failed\\
-    and we deliberately misread the Agile Manifesto\\
-    as `no need plan'.\\
-    Just start programming!
-    \vfil
-    And as if this wasn't bad enough,\\
-    just to make you feel completely hopeless,\\
-    I would say that suck\\
-    is actually built into human psychology.
-  }
+  % \note<4>{
+  %   So,\\
+  %   say you start a new project,\\
+  %   well resourced with all the best intentions.\\
+  %   The organization is still against you.\\
+  %   Who is available to work on the project?\\
+  %   Anyone who is new or is anyone whose on the bench.\\
+  %   This isn't necessarily a bad thing.\\
+  %   The average age of the team that\\
+  %   helped put Neil Armstrong to the moon was 28.\\
+  %   But they were all new graduate engineers.\\
+  %   The experienced engineers all had jobs\\
+  %   and why take a risk on a new project?
+  % }
+  % \note<5>{
+  %   Then there is \textbf{Agile Management Practice} \ldots\\
+  %   it was such a great idea.\\
+  %   That we should respond to change over following the plan.\\
+  %   It didn't say we shouldn't plan.\\
+  %   But I was there 25 years ago,\\
+  %   I was there the day the strength of Men failed\\
+  %   and we deliberately misread the Agile Manifesto\\
+  %   as `no need plan'.\\
+  %   Just start programming!
+  %   \vfil
+  %   And as if this wasn't bad enough,\\
+  %   just to make you feel completely hopeless,\\
+  %   I would say that suck\\
+  %   is actually built into human psychology.
+  % }
 \end{frame}
 
 \begin{frame}{Why Code Sucks}
@@ -235,8 +235,8 @@
   \begin{itemize}
     \item The Illusion of Explanatory Depth
       \pause
-    \item The Lake Wobegon Effect
-      \pause
+    % \item The Lake Wobegon Effect
+    %   \pause
     \item Availability Bias
   \end{itemize}
   \note<1>{
@@ -250,18 +250,18 @@
     But writing code is about explaining things in detail.\\
     And it does nothing but expose how little I know.
   }
+  % \note<2>{
+  %   Add to this the Lake Wobegon Effect.\\
+  %   Named after the fictional town,\\
+  %   where all the women are strong, all the men are good-looking,\\
+  %   and all the children are above average.\\
+  %   90\% of drivers rate themselves in the top 50\% of driving ability.\\
+  %   I think the code I write is above average.\\
+  %   but is probably isn't.
+  %   \vfil
+  %   My judgement is clouded by my own ego.
+  % }
   \note<2>{
-    Add to this the Lake Wobegon Effect.\\
-    Named after the fictional town,\\
-    where all the women are strong, all the men are good-looking,\\
-    and all the children are above average.\\
-    90\% of drivers rate themselves in the top 50\% of driving ability.\\
-    I think the code I write is above average.\\
-    but is probably isn't.
-    \vfil
-    My judgement is clouded by my own ego.
-  }
-  \note<3>{
     There is a chance that I have seen non sucky code.\\
     But I can't really remember it.\\
     A couple of years ago we used a static analysis tool on our code.\\
@@ -344,9 +344,9 @@
     \item Side by side rewrite
   \end{itemize}
   \note{
-    I should say that this wasn't my idea.\\
+    I should say that this isn't my idea.\\
     This is based on the work of Michael Feathers.\\
-    in his book Working Effectively with Legacy Code.\\
+    in his book \textbf{Working Effectively with Legacy Code}.\\
     It is the definitive guide to working with sucky code.\\
     But it is over 20 years old now.\\
     And unfortunately the it has not been updated.\\

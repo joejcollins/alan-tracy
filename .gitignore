@@ -254,3 +254,6 @@ core
 
 # Mac Desktop Services Store
 .DS_Store
+
+# Data Files
+data

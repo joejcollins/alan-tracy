@@ -1,6 +1,9 @@
 # Consistent set of make tasks.
 .DEFAULT_GOAL:=help  # because it's is a safe task.
 
+app:  # Run the application.
+	.venv/bin/fastapi dev src/alan_tracy/app.py
+
 clean: # Remove the environment.
 	rm -rf .venv
 	rm -rf *.egg-info
@@ -10,7 +13,7 @@ clean: # Remove the environment.
 docs: # Build the documentation.
 	cd docs && mkdocs build
 
-docs-serve: # Serve the documention.
+docs-serve: # Serve the documentation.
 	cd docs && mkdocs serve
 
 lock:  # Create the lock file and requirements file.
