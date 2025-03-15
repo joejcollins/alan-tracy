@@ -28,6 +28,7 @@
         "testpaths",
         "texlive",
         "tqdm",
-        "venv"
+        "venv",
+        "Zengenti"
     ]
 }

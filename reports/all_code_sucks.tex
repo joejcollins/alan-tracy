@@ -36,7 +36,7 @@
   \href{https://linkedin.com/in/joejcollins}{linkedin.com/in/joejcollins}
 }
 \institute{\includegraphics[height=1.5cm]{images/zengenti.png}}
-\date{21 March 2024}
+\date{21 March 2025}
 
 \begin{frame}[plain]
   \titlepage
@@ -64,25 +64,25 @@
     only incidentally for computers to execute.''\\
     \hfill --- Donald Knuth
   \end{quote}
-  \bigskip
-  \begin{quote}
-    ``It is better to have clean code that doesn't work
-    than crap code that does.''\\
-    \hfill --- Robert C. Martin
-  \end{quote}
+  % \bigskip
+  % \begin{quote}
+  %   ``It is better to have clean code that doesn't work
+  %   than crap code that does.''\\
+  %   \hfill --- Robert C. Martin
+  % \end{quote}
   \note{My short answer is \dots \textbf{sucky code is hard to read}.\\
     No need take my word for it.\\
     Donald Knuth, the Yoda of Computer Science\\
     says that code is for humans to read\\
     and sometimes for computers to run.\\
     He is all about the readability.\\
-    \vfil
-    Uncle Bob Martin is more emphatic.\\
-    He uses the term clean code.\\
-    as a proxy for readability.\\
-    He's says that readability is more important than working code.\\
-    If you can understand it, then you can fix it,\\
-    but if you can't understand it and it breaks, you can't fix it.
+    % \vfil
+    % Uncle Bob Martin is more emphatic.\\
+    % He uses the term clean code.\\
+    % as a proxy for readability.\\
+    % He's says that readability is more important than working code.\\
+    % If you can understand it, then you can fix it,\\
+    % but if you can't understand it and it breaks, you can't fix it.
   }
 \end{frame}
 
@@ -92,14 +92,7 @@
     I have been looking for code that doesn't suck.\\
     And trying to produce code that doesn't suck.\\
     I've worked in companies large and small.\\
-    Worked with scumbags and saints.\\
     But pretty much, all the code sucked.
-    \vfil
-    Maybe I just got unlucky.\\
-    But I think I am seeing a pattern here.\\
-    Maybe I should stop looking for the perfect code.\\
-    Maybe I should admit that all code sucks.\\
-    And I should work out what to do about it.
     \vfil
     This does beg the question, why does it all suck?
   }
@@ -116,34 +109,21 @@
   \end{itemize}
   \note<1>{
     On the whole I think the odds are against us.\\
-    When we talk about code readability\\
-    we are talking about a bell curve.\\
     Straight out of the gate,\\
     half of everything is going to be below average.\\
-    Well, below the median.\\
-    You don't have to be Francis Galton\\
-    or any famous statistician\\
-    to realize that.
+    Well, below the median.
   }
   \note<2>{Then there is Sturgeon's Law.\\
     Sturgeon was explaining why most science fiction is low quality.\\
     And came up with the pithy answer\\
     ``90\% of everything is shit''.\\
-    The observation works here too.\\
-    Only some things are really good.\\
-    Or put another way most of anything is bad.
+    The observation works here too.
   }
   \note<3>{
-    Then there's an issue peculiar to the programming business.\\
-    The demand for programmers for the last 25 years\\
-    has always outstripped supply.\\
     When I started out\\
     the average programmers experience was 3 years.\\
-    And that hasn't changed.\\
-    As more and more people have entered the business\\
-    they have kept the average experience down.\\
-    There are a few old hands around but\\
-    as a group we still don't have that much experience.
+    25 years later that hasn't changed.\\
+    Probably (and fortunately) because demand outstrips supply.
     \vfil
     So if the odds are against us\\
     maybe the organizations we work for will help.\\
@@ -159,10 +139,10 @@
     \item Summer Student Projects
       \pause
     \item Prototypes in Production
-    %   \pause
-    % \item The New Project Effect
-    %   \pause
-    % \item The Agile Manifesto
+      %   \pause
+      % \item The New Project Effect
+      %   \pause
+      % \item The Agile Manifesto
   \end{itemize}
   \note<1>{
     The romantic image of a software startup is\\
@@ -170,12 +150,9 @@
     I have actually see this quite a bit.\\
     For most start ups the two guys are the dad and the son.\\
     The dad is the salesman.\\
-    And the son is the programmer,\\
-    who's typically been excluded from school for some reason.\\
-    Writing readable code isn't really on their agenda.\\
-    In fact reading plain English is not on their agenda.\\
-    The third employee?\\
-    The son's best mate from school who was also excluded.
+    And the son is the programmer.\\
+    They are inherently under resourced.\\
+    Writing readable code is a luxury they can't afford.
   }
   \note<2>{
     The other kind of startup I have seen\\
@@ -195,8 +172,11 @@
     Having learnt from the prototype,\\
     the plan was to throw it away and build it for real.\\
     But that never happens.\\
-    It is always put into production.\\
-    And lives forever.
+    It is always put into production.
+    \vfil
+    Just in case you haven't lost all hope\\
+    I would say that suck\\
+    is actually built into human psychology.
   }
   % \note<4>{
   %   So,\\
@@ -235,129 +215,69 @@
   \begin{itemize}
     \item The Illusion of Explanatory Depth
       \pause
-    % \item The Lake Wobegon Effect
-    %   \pause
+      % \item The Lake Wobegon Effect
+      %   \pause
     \item Availability Bias
   \end{itemize}
   \note<1>{
-    I think I am an intelligent person.\\
-    I think I can understand most things.\\
-    But my understanding is only a deep as it actually is.\\
-    I am completely unaware of my ignorance.\\
-    Because I am ignorant of it.\\
-    I believe I understand things more than I do.\\
-    It is unavoidable.\\
+    We are unaware of our ignorance.\\
+    Because we are ignorant of it.\\
+    We don't know what we don't know.\\
     But writing code is about explaining things in detail.\\
-    And it does nothing but expose how little I know.
+    So it is no surprise that we struggle.
   }
-  % \note<2>{
-  %   Add to this the Lake Wobegon Effect.\\
-  %   Named after the fictional town,\\
-  %   where all the women are strong, all the men are good-looking,\\
-  %   and all the children are above average.\\
-  %   90\% of drivers rate themselves in the top 50\% of driving ability.\\
-  %   I think the code I write is above average.\\
-  %   but is probably isn't.
-  %   \vfil
-  %   My judgement is clouded by my own ego.
-  % }
   \note<2>{
-    There is a chance that I have seen non sucky code.\\
-    But I can't really remember it.\\
     A couple of years ago we used a static analysis tool on our code.\\
     To my surprise is said most of the code was good.\\
     But it pointed to the five worst files.\\
     Those were the files I spend most of my time working on.\\
-    If by some miracle the code is good,\\
-    you will only ever work on the bad bits.\\
     Those will be the bits you remember.\\
-    So you think all code sucks.
+    So it turns out all code doesn't suck,\\
+    I just feels like it.
     \vfil
-    So what we to do about it?
+    Nevertheless, makes sense to tool up for sucky code.
   }
 \end{frame}
-
-\begin{frame}{What Not To Do}
-  \framesubtitle{Ritual Code Mocking}
-  \includegraphics[width=\textwidth]{images/code-mocking.png}
-  \note{Ritual code mocking is good fun\\
-    and a great way to let off steam\\
-    but it is actively harmful to team performance.\\
-    /dots but that is a whole other talk for another day.\\
-    We have to remember that\\
-    everyone that worked on the code\\
-    did their very best\\
-    with the time, resources and knowledge they had.\\
-    If we can't read the code\\
-    we have to find a way to work with it.
-    \vfil
-    So I am going to show you just a few techniques\\
-    we use at Zengenti to work with sucky code.
-  }
-\end{frame}
-
-% \begin{frame}{Improving Readability}
-%   \begin{columns}
-%     \begin{column}{0.45\textwidth}
-%       \begin{block}{}
-%         create a fast api endpoint that is called the answer
-%         that takes a number and divides it by 2 and then works
-%         out what two numbers to add together to make that number,
-%         which it returns in a json package that includes the keys
-%         first number and other number it should also write the
-%         number out to a file named after \ldots
-%       \end{block}
-%     \end{column}
-%     \begin{column}{0.1\textwidth}
-%       \centering \bf
-%       $\Rightarrow$
-%     \end{column}
-%     \begin{column}{0.45\textwidth}
-%       \begin{block}{}
-%         \textbf{\Large Answer API}\\
-%         An API endpoint that takes a number,
-%         and returns the two numbers to add together\\
-%         to make the original number.
-%         \vfill
-%         \textbf{Parameters:}
-%         \begin{itemize}
-%           \item \texttt{number} (int)
-%           \item \texttt{first} (int)
-%           \item \texttt{other} (int)
-%         \end{itemize}
-%         \ldots
-%       \end{block}
-%     \end{column}
-%   \end{columns}
-%   \note{
-%     In case you thought this was an entirely technical problem.\\
-%     It isn't.\\
-%   }
-% \end{frame}
 
 \begin{frame}{What To Do}
   \framesubtitle{Based on the work of Michael Feathers}
   \begin{enumerate}
+      \pause
     \item Log behavior
+      \pause
     \item Put the code in a harness
+      \pause
     \item Get ahead of the offending code with a feature flag
+      \pause
     \item Side by side rewrite
   \end{enumerate}
-  \note{
+  \note<1>{
     I should say that this isn't my idea.\\
     This is based on the work of Michael Feathers.\\
     in his book \textbf{Working Effectively with Legacy Code}.\\
     It is the definitive guide to working with sucky code.\\
     But it is over 20 years old now.\\
-    And unfortunately the it has not been updated.\\
     But it is still the best guide I have found.\\
     \vfil
     Also I have skipped the step\\
     getting control of the development environment.\\
     At Zengenti we use ephemeral environments\\
-    either Docker Containers or Virtual Machines\\
-    to keep everything clean.\\
-    But that is a whole other talk again.
+    either Docker Containers or Virtual Machines.\\
+    But that is a whole other talk.
+  }
+  \note<2>{
+    First off we need to find out what the code does.
+    \vfil
+    This is my app, there are many others like it,\\
+    but this one is mine.\\
+
+    Logging
+  }
+  \note<3>{
+    Investigation
+  }
+  \note<4>{
+    Harness
   }
 \end{frame}
 
@@ -404,6 +324,11 @@
     Or if you have an idea how to manage the process,\\
     Let's talk.
   }
+\end{frame}
+
+\begin{frame}{What Not To Do}
+  \framesubtitle{Whatever you do, don't do this}
+  \includegraphics[width=\textwidth]{images/code-mocking.png}
 \end{frame}
 
 \end{document}

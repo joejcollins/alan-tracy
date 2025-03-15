@@ -29,6 +29,7 @@ dependencies = [
     "sourcery",
     "tqdm",
     "types-tqdm",
+    "unleash"
 ]
 [project.urls]
 repository = "https://github.com/joejcollins/alan_tracy"
