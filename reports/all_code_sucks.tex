@@ -7,6 +7,7 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{itemize items}{\textbullet}
 
+\usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -43,7 +44,7 @@
     I'm Big Joe from Zengenti.\\
     We are a small company in Shropshire. About 70 nerds.\\
     We do websites for universities and local authorities.\\
-    I don't actually do any websites, I work in the hosting team.\\
+    I actually don't do any websites, I work in the hosting team.\\
     We maintain a private cloud to run the websites.\\
     We use a combination of Ansible and Python\\
     maintaining about 3000 servers.\\
@@ -78,7 +79,7 @@
     \vfil
     Uncle Bob Martin is more emphatic.\\
     He uses the term clean code.\\
-    It is really a proxy for readability.\\
+    as a proxy for readability.\\
     He's says that readability is more important than working code.\\
     If you can understand it, then you can fix it,\\
     but if you can't understand it and it breaks, you can't fix it.
@@ -90,9 +91,9 @@
   \note{For about about 25 years now,\\
     I have been looking for code that doesn't suck.\\
     And trying to produce code that doesn't suck.\\
-    I've in companies both big and small.\\
+    I've worked in companies large and small.\\
     Worked with scumbags and saints.\\
-    But pretty much all the code sucked.
+    But pretty much, all the code sucked.
     \vfil
     Maybe I just got unlucky.\\
     But I think I am seeing a pattern here.\\
@@ -146,7 +147,7 @@
     \vfil
     So if the odds are against us\\
     maybe the organizations we work for will help.\\
-    Well perhaps not.
+    Or perhaps not.
   }
 \end{frame}
 
@@ -177,7 +178,8 @@
     The son's best mate from school who was also excluded.
   }
   \note<2>{
-    The other kind of startup I have seen occurs in big companies.\\
+    The other kind of startup I have seen\\
+    occurs in big companies.\\
     The summer student project.\\
     Alternatively called the unsupervised use of new technology.\\
     All the experienced programmers are on holiday or busy.\\
@@ -213,17 +215,18 @@
   \note<5>{
     Then there is \textbf{Agile Management Practice} \ldots\\
     it was such a great idea.\\
-    We should respond to change over following the plan.\\
+    That we should respond to change over following the plan.\\
     It didn't say we shouldn't plan.\\
     But I was there 25 years ago,\\
     I was there the day the strength of Men failed\\
-    and we deliberate misread the Agile Manifesto\\
+    and we deliberately misread the Agile Manifesto\\
     as `no need plan'.\\
     Just start programming!
     \vfil
     And as if this wasn't bad enough,\\
     just to make you feel completely hopeless,\\
-    I would say that suck is actually built into human psychology.
+    I would say that suck\\
+    is actually built into human psychology.
   }
 \end{frame}
 
@@ -260,7 +263,7 @@
   }
   \note<3>{
     There is a chance that I have seen non sucky code.\\
-    But I can't remember it.\\
+    But I can't really remember it.\\
     A couple of years ago we used a static analysis tool on our code.\\
     To my surprise is said most of the code was good.\\
     But it pointed to the five worst files.\\
@@ -279,28 +282,82 @@
   \includegraphics[width=\textwidth]{images/code-mocking.png}
   \note{Ritual code mocking is good fun\\
     and a great way to let off steam\\
-    but it is actively harmful to team morale.\\
-    But that is a whole other talk for another day.\\
+    but it is actively harmful to team performance.\\
+    /dots but that is a whole other talk for another day.\\
     We have to remember that\\
-    everyone that worked on the code
-    did their very best \\
+    everyone that worked on the code\\
+    did their very best\\
     with the time, resources and knowledge they had.\\
     If we can't read the code\\
     we have to find a way to work with it.
     \vfil
-    So I am going to show you just a couple of techniques\\
+    So I am going to show you just a few techniques\\
     we use at Zengenti to work with sucky code.
+  }
+\end{frame}
+
+\begin{frame}{Improving Readability}
+  \begin{columns}
+    \begin{column}{0.45\textwidth}
+      \begin{block}{}
+        create a fast api endpoint that is called the answer
+        that takes a number and divides it by 2 and then works
+        out what two numbers to add together to make that number,
+        which it returns in a json package that includes the keys
+        first number and other number it should also write the
+        number out to a file named after \ldots
+      \end{block}
+    \end{column}
+    \begin{column}{0.1\textwidth}
+      \centering \bf
+      $\Rightarrow$
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{block}{}
+        \textbf{\Large Answer API}\\
+        An API endpoint that takes a number,
+        and returns the two numbers to add together\\
+        to make the original number.
+        \vfill
+        \textbf{Parameters:}
+        \begin{itemize}
+          \item \texttt{number} (int)
+          \item \texttt{first} (int)
+          \item \texttt{other} (int)
+        \end{itemize}
+        \ldots
+      \end{block}
+    \end{column}
+  \end{columns}
+  \note{
+    In case you thought this was an entirely technical problem.\\
+    It isn't.\\
   }
 \end{frame}
 
 \begin{frame}{What To Do}
   \framesubtitle{Based on the work of Michael Feathers}
   \begin{itemize}
-    \item Put the code in a vice (a test harness)
+    \item Log behavior
+    \item Put the code in a harness
     \item Get ahead of the offending code with a feature flag
     \item Side by side rewrite
   \end{itemize}
   \note{
+    I should say that this wasn't my idea.\\
+    This is based on the work of Michael Feathers.\\
+    in his book Working Effectively with Legacy Code.\\
+    It is the definitive guide to working with sucky code.\\
+    But it is over 20 years old now.\\
+    And unfortunately the it has not been updated.\\
+    But it is still the best guide I have found.\\
+    \vfil
+    Also I have skipped the step\\
+    getting control of the development environment.\\
+    At Zengenti we use ephemeral environments\\
+    either Docker Containers or Virtual Machines\\
+    to keep everything clean.\\
+    But that is a whole other talk again.
   }
 \end{frame}
 

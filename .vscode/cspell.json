@@ -8,6 +8,7 @@
         "Beane",
         "debugpy",
         "dotenv",
+        "fastapi",
         "ipykernel",
         "ipympl",
         "latexmk",

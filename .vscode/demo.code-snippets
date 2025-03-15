@@ -1,0 +1,13 @@
+{
+    "Pytest Skeleton": {
+        "prefix": "python-pytest",
+        "body": [
+            "def test_environment_site_routes_put_redirect_no_exist(monkeypatch: MonkeyPatch) -> None:",
+                "    \"\"\"Test.\"\"\"",
+                "    # ARRANGE",
+                "    # ACT",
+                "    # ASSERT"
+        ],
+        "description": "Pytest test function"
+    },
+}

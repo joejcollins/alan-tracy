@@ -12,6 +12,7 @@ classifiers = [
 requires-python = ">=3.12"
 dependencies = [
     "debugpy",
+    "fastapi",
     "ipykernel",
     "ipympl",
     "loguru",
