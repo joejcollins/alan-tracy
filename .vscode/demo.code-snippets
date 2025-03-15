@@ -1,6 +1,6 @@
 {
 
-    "Demo Log": {
+    "Add logging for discovery": {
         "prefix": "demo01log",
         "body": [
             "from loguru import logger",
@@ -8,7 +8,7 @@
         ],
         "description": "Add logging to the endpoint so we can see what is happening"
     },
-    "Demo Http Life": {
+    "Http exploration of the meaning of life": {
         "prefix": "demo02http01",
         "body": [
             "### Confirm the meaning of life",
@@ -23,7 +23,7 @@
         ],
         "description": "Try the HTTP endpoint to see if you get the meaning of life message"
     },
-    "Demo Http Two": {
+    "Http exploration with the number two": {
         "prefix": "demo02http02",
         "body": [
             "### Confirm that one and one is two",
@@ -38,7 +38,7 @@
         ],
         "description": "Try the HTTP endpoint to see if some math works"
     },
-    "Demo Pytest Life": {
+    "Automated test of the meaning of life": {
         "prefix": "demo03test01",
         "body": [
             "def test_the_meaning_of_life() -> None:",
@@ -53,7 +53,7 @@
         ],
         "description": "Test the meaning of life endpoint"
     },
-    "Demo Pytest Two": {
+    "Automated test of the number two": {
         "prefix": "demo03test02",
         "body": [
             "def test_one_and_one_is_two() -> None:",
@@ -67,5 +67,23 @@
             "    assert response.json()[\"what_was_written\"] == \"2\"",
         ],
         "description": "Test the meaning maths endpoint"
+    },
+    "Add a separate function": {
+        "prefix": "demo4function01",
+        "body": [
+            "    return qwer(digit)",
+            "",
+            "def qwer(digit):"
+        ],
+        "description": "Separate the logic from the endpoint"
+    },
+    "Add a feature flag": {
+        "prefix": "demo5flag01",
+        "body": [
+            "if unleash.toggle(\"joe-new-function\"):",
+            "    return qwer(digit)",
+            "else:",
+        ],
+        "description": "Add a feature flag to the endpoint"
     },
 }
