@@ -257,3 +257,6 @@ core
 
 # Data Files
 data
+
+# Scratch files
+shit.*

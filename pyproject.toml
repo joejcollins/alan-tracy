@@ -12,7 +12,7 @@ classifiers = [
 requires-python = ">=3.12"
 dependencies = [
     "debugpy",
-   "fastapi[standard]",
+    "fastapi[standard]",
     "ipykernel",
     "ipympl",
     "loguru",
@@ -29,7 +29,7 @@ dependencies = [
     "sourcery",
     "tqdm",
     "types-tqdm",
-    "unleash"
+    "UnleashClient",
 ]
 [project.urls]
 repository = "https://github.com/joejcollins/alan_tracy"
