@@ -8,6 +8,7 @@
 				"python.terminal.activateEnvironment": true
 			},
 			"extensions": [
+				"anweber.vscode-httpyac",
 				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
 				"ms-python.python",

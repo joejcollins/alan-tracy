@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "anweber.vscode-httpyac",
         "charliermarsh.ruff",
         "james-yu.latex-workshop",
         "ms-toolsai.jupyter",

@@ -24,6 +24,7 @@
         "pytest",
         "Sourcery",
         "sucky",
+        "tamasfe",
         "testpaths",
         "texlive",
         "tqdm",

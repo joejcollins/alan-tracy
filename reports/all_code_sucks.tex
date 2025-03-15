@@ -296,53 +296,53 @@
   }
 \end{frame}
 
-\begin{frame}{Improving Readability}
-  \begin{columns}
-    \begin{column}{0.45\textwidth}
-      \begin{block}{}
-        create a fast api endpoint that is called the answer
-        that takes a number and divides it by 2 and then works
-        out what two numbers to add together to make that number,
-        which it returns in a json package that includes the keys
-        first number and other number it should also write the
-        number out to a file named after \ldots
-      \end{block}
-    \end{column}
-    \begin{column}{0.1\textwidth}
-      \centering \bf
-      $\Rightarrow$
-    \end{column}
-    \begin{column}{0.45\textwidth}
-      \begin{block}{}
-        \textbf{\Large Answer API}\\
-        An API endpoint that takes a number,
-        and returns the two numbers to add together\\
-        to make the original number.
-        \vfill
-        \textbf{Parameters:}
-        \begin{itemize}
-          \item \texttt{number} (int)
-          \item \texttt{first} (int)
-          \item \texttt{other} (int)
-        \end{itemize}
-        \ldots
-      \end{block}
-    \end{column}
-  \end{columns}
-  \note{
-    In case you thought this was an entirely technical problem.\\
-    It isn't.\\
-  }
-\end{frame}
+% \begin{frame}{Improving Readability}
+%   \begin{columns}
+%     \begin{column}{0.45\textwidth}
+%       \begin{block}{}
+%         create a fast api endpoint that is called the answer
+%         that takes a number and divides it by 2 and then works
+%         out what two numbers to add together to make that number,
+%         which it returns in a json package that includes the keys
+%         first number and other number it should also write the
+%         number out to a file named after \ldots
+%       \end{block}
+%     \end{column}
+%     \begin{column}{0.1\textwidth}
+%       \centering \bf
+%       $\Rightarrow$
+%     \end{column}
+%     \begin{column}{0.45\textwidth}
+%       \begin{block}{}
+%         \textbf{\Large Answer API}\\
+%         An API endpoint that takes a number,
+%         and returns the two numbers to add together\\
+%         to make the original number.
+%         \vfill
+%         \textbf{Parameters:}
+%         \begin{itemize}
+%           \item \texttt{number} (int)
+%           \item \texttt{first} (int)
+%           \item \texttt{other} (int)
+%         \end{itemize}
+%         \ldots
+%       \end{block}
+%     \end{column}
+%   \end{columns}
+%   \note{
+%     In case you thought this was an entirely technical problem.\\
+%     It isn't.\\
+%   }
+% \end{frame}
 
 \begin{frame}{What To Do}
   \framesubtitle{Based on the work of Michael Feathers}
-  \begin{itemize}
+  \begin{enumerate}
     \item Log behavior
     \item Put the code in a harness
     \item Get ahead of the offending code with a feature flag
     \item Side by side rewrite
-  \end{itemize}
+  \end{enumerate}
   \note{
     I should say that this isn't my idea.\\
     This is based on the work of Michael Feathers.\\

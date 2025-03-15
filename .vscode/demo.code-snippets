@@ -1,13 +1,71 @@
 {
-    "Pytest Skeleton": {
-        "prefix": "python-pytest",
+
+    "Demo Log": {
+        "prefix": "demo01log",
         "body": [
-            "def test_environment_site_routes_put_redirect_no_exist(monkeypatch: MonkeyPatch) -> None:",
-                "    \"\"\"Test.\"\"\"",
-                "    # ARRANGE",
-                "    # ACT",
-                "    # ASSERT"
+            "from loguru import logger",
+            "logger.info(f\"Received request for {digit}\")"
         ],
-        "description": "Pytest test function"
+        "description": "Add logging to the endpoint so we can see what is happening"
+    },
+    "Demo Http Life": {
+        "prefix": "demo02http01",
+        "body": [
+            "### Confirm the meaning of life",
+            "GET http://127.0.0.1:8000/the_answer/42",
+            "> {%",
+            "    client.test(\"Request executed successfully\", function() {",
+            "        client.assert(response.status === 200, \"Response status is not 200\");",
+            "        client.assert(response.body.startsWith(\"life the universe\"), \"Response body is not right\");",
+            "    });",
+            "    console.log(\"response :\", response.body);",
+            "%}"
+        ],
+        "description": "Try the HTTP endpoint to see if you get the meaning of life message"
+    },
+    "Demo Http Two": {
+        "prefix": "demo02http02",
+        "body": [
+            "### Confirm that one and one is two",
+            "GET http://127.0.0.1:8000/the_answer/2",
+            "> {%",
+            "    client.test(\"Request executed successfully\", function() {",
+            "        client.assert(response.status === 200, \"Response status is not 200\");",
+            "        client.assert(response.body.what_was_written === 2, \"Response body is not right\");",
+            "    });",
+            "    console.log(\"response :\", response.body.what_was_written);",
+            "%}"
+        ],
+        "description": "Try the HTTP endpoint to see if some math works"
+    },
+    "Demo Pytest Life": {
+        "prefix": "demo03test01",
+        "body": [
+            "def test_the_meaning_of_life() -> None:",
+            "    \"\"\"Test.\"\"\"",
+            "    # Arrange",
+            "    client = testclient.TestClient(app.app)",
+            "    # Act",
+            "    response = client.get(\"/the_answer/42\")",
+            "    # Assert",
+            "    assert response.status_code == http.HTTPStatus.OK",
+            "    assert response.json() == \"life the universe and everything\"",
+        ],
+        "description": "Test the meaning of life endpoint"
+    },
+    "Demo Pytest Two": {
+        "prefix": "demo03test02",
+        "body": [
+            "def test_one_and_one_is_two() -> None:",
+            "    \"\"\"Test.\"\"\"",
+            "    # Arrange",
+            "    client = testclient.TestClient(app.app)",
+            "    # Act",
+            "    response = client.get(\"/the_answer/2\")",
+            "    # Assert",
+            "    assert response.status_code == http.HTTPStatus.OK",
+            "    assert response.json()[\"what_was_written\"] == \"2\"",
+        ],
+        "description": "Test the meaning maths endpoint"
     },
 }
