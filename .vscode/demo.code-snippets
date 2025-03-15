@@ -87,7 +87,7 @@
         "description": "Add a feature flag to the endpoint"
     },
     "Rewrite the function": {
-        "prefix": "demo6New01",
+        "prefix": "demo6new01",
         "body": [
             "def describe_number(digit):",
             "\t\"\"\"",
