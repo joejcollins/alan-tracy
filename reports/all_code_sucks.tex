@@ -250,48 +250,54 @@
       \item \textbf{New Code} Side by side rewrite
     \end{itemize}
   \note<1>{
-    I should say that this isn't my idea.\\
-    This is based on the work of Michael Feathers.\\
-    in his book \textbf{Working Effectively with Legacy Code}.\\
-    It is the definitive guide to working with sucky code.\\
-    But it is over 20 years old now.\\
-    But it is still the best guide I have found.\\
+    This is my adapted 6 step plan to work on sucky code.\\
+    The initial discovery is to find out how the code is actually used.\\
+    Then we can start to explore the code and find it's quirks.\\
+    Our intermediate goal is to write some automated tests.\\
+    To protect us from making changes that might break things.\\
+    With the tests in place we can start to deconstruct the code.\\
+    And target the bits that need attention.\\
+    Using a feature flag will enable us to switch between\\
+    old and new code.\\
+    Finally we can get on with the job of writing new code.
     \vfil
-    Also I have skipped the step\\
-    getting control of the development environment.\\
-    At Zengenti we use ephemeral environments\\
-    either Docker Containers or Virtual Machines.\\
-    But that is a whole other talk.
+    I skipped taking control of the development environment.\\
+    At Zengenti we use ephemeral environments.\\
+    But that is whole other talk.
   }
   \note<2>{
-    Example, API with one end point, see the squiggles.\\
+    As a demo I have and API with one end point.\\
+    Enjoy the squiggles, however, it does run.\\
     \textbf{make app}\\
-    Is is a valuable must preserve the behavior.\\
+    Let's take and look and see what it does.\\
     \textbf{Open http://127.0.0.1:8000/docs}\\
-    I will just mimic some behavior.\\
     \textbf{Try 2 and 42}\\
-    The behavior isn't abstract, it is in context of use.\\
-    We need to discover how the end point is used.\\
+    I can't really tell what is going on.\\
+    We really need to discover how the end point is used.\\
+    So adding some logging is a good idea.\\
     \textbf{demo01log}\\
-    Feathers don't change, but sometimes you have to.\\
+    Feathers don't change until you have tests,\\
+    but sometimes you have to.\\
+    \textbf{Try 2, 4 and 42}\\
+    We have a log of actual user behavior.
   }
   \note<3>{
     Now we know how the end point is used.\\
     We can start to explore the code.\\
     \textbf{Open tests/app.http}\\
-    We use http scripts to mimic the behavior.\\
+    We can use http scripts to mimic the UI behavior.\\
     \textbf{demo2http01}\\
-    There's a Jetbrains client or a VSCode extension.\\
+    There's a Jetbrains client or in this case a VSCode extension.\\
     \textbf{demo2http02}\\
     This allows us to do some scripted investigation.\\
     Looks like a string is coming back.\\
     Not a number.\\
     \textbf{Fix inverted commas}\\
-    And to get a feel for the behavior.\\
+    We can get a feel for the behavior and quirks.\\
     We might start to get an insight into the author's intent.\\
   }
   \note<4>{
-    Using this knowledge we can write some automated tests.\\
+    With this knowledge we can write some proper automated tests.\\
     \textbf{Open tests/app\_test.py}\\
     These are the clamps that will hold the code in place.\\
     As Michael Feathers calls them.\\
@@ -306,7 +312,7 @@
     To let is know it is alright to continue.\\
   }
   \note<5>{
-    We the automated tests in place.\\
+    With the automated tests in place.\\
     We are ready to start deconstructing the code.\\
     \textbf{Open app.py}\\
     We can start to separate the target code.\\
@@ -314,14 +320,13 @@
     Since we don't really know what the code does.\\
     We can't give it a meaningful name.\\
     Michael Feathers suggests just mashing the keyboard.\\
-    foo and bar would be just as good.\\
     We can check that it works in all it's ugliness.\\
     By rerunning the tests.\\
     \textbf{make test}\\
   }
   \note<6>{
     Stay with me we are getting close.\\
-    Now we can set up a switch.\\
+    Now we can enable a switch to control any new code.\\
     There are lots of tools to do this.\\
     We favour Unleash because it comes for free with Gitlab.\\
     \textbf{Open /joejcollins/alan-tracy/-/feature\_flags}\\
@@ -329,11 +334,10 @@
     I can use this to switch between the old and the new code.\\
     \textbf{demo5flag01}\\
     \textbf{make test}\\
-    So let rewrite the code.\\
+    So lets rewrite the code.\\
     \textbf{demo6new01}\\
-    This is a cut and paste from ChatGPT.\\
-    It is still a bit of a mess.\\
-    But I am running out of time.
+    This is actually a cut and paste from ChatGPT.\\
+    It is still a bit of a mess, but I am running out of time.
   }
 \end{frame}
 
@@ -350,7 +354,7 @@
   \end{quote}
   \bigskip
   \note{To quote Moneyball,\\
-    the challenge is both easy and difficult.\\
+    this challenge is both easy and difficult.\\
     The example was one function and one file.\\
     But the code we are working with has 3500 files.\\
     Some is hard to read,\\
@@ -375,16 +379,11 @@
     If you thought this was interesting,\\
     and would like to work with us,\\
     please get in touch.\\
-    If you think you have a better way to work with sucky code,\\
+    If you have other ideas how to work with sucky code,\\
     I'm all ears.\\
     Or if you have an idea how to manage the process,\\
     Let's talk.
   }
-\end{frame}
-
-\begin{frame}{What Not To Do}
-  \framesubtitle{Whatever you do, don't do this}
-  \includegraphics[width=\textwidth]{images/code-mocking.png}
 \end{frame}
 
 \end{document}
