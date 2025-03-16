@@ -13,7 +13,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 \setbeamerfont{frametitle}{size=\LARGE}
 \setbeamerfont{framesubtitle}{size=\Large}
-% \setbeamerfont{note page}{size=\footnotesize}
+\setbeamerfont{note page}{size=\footnotesize}
 
 \setbeamertemplate{footline}{
   \leavevmode%
@@ -53,6 +53,7 @@
     \vfil
     We all know good code,\\
     or at least we think we do.\\
+    \vfil
     But I should probably define what I mean by sucky code.\\
   }
 \end{frame}
@@ -72,7 +73,7 @@
   % \end{quote}
   \note{My short answer is \dots \textbf{sucky code is hard to read}.\\
     No need take my word for it.\\
-    Donald Knuth, the Yoda of Computer Science\\
+    Donald Knuth, the Yoda of Computer Science,\\
     says that code is for humans to read\\
     and sometimes for computers to run.\\
     He is all about the readability.\\
@@ -92,9 +93,9 @@
     I have been looking for code that doesn't suck.\\
     And trying to produce code that doesn't suck.\\
     I've worked in companies large and small.\\
-    But pretty much, all the code sucked.
+    But pretty much, all the code sucked.\\
     \vfil
-    This does beg the question, why does it all suck?
+    This does beg the question, why does all code suck?\\
   }
 \end{frame}
 
@@ -111,23 +112,26 @@
     On the whole I think the odds are against us.\\
     Straight out of the gate,\\
     half of everything is going to be below average.\\
-    Well, below the median.
+    Well, below the median.\\
+    That's just the way averages work.\\
   }
   \note<2>{Then there is Sturgeon's Law.\\
     Sturgeon was explaining why most science fiction is low quality.\\
-    And came up with the pithy answer\\
+    And came up with the pithy answer,\\
     ``90\% of everything is shit''.\\
-    The observation works here too.
+    The observation works here too.\\
   }
   \note<3>{
+    Then there is our experience.\\
     When I started out\\
     the average programmers experience was 3 years.\\
-    25 years later that hasn't changed.\\
-    Probably (and fortunately) because demand outstrips supply.
+    Now 25 years later that hasn't changed.\\
+    Probably because demand outstrips supply.\\
+    Which has been nice.\\
     \vfil
     So if the odds are against us\\
-    maybe the organizations we work for will help.\\
-    Or perhaps not.
+    maybe the organizations we work for, will help.\\
+    Or perhaps not.\\
   }
 \end{frame}
 
@@ -152,17 +156,17 @@
     The dad is the salesman.\\
     And the son is the programmer.\\
     They are inherently under resourced.\\
-    Writing readable code is a luxury they can't afford.
+    Writing readable code is a luxury they can't afford.\\
   }
   \note<2>{
     The other kind of startup I have seen\\
     occurs in big companies.\\
     The summer student project.\\
-    Alternatively called the unsupervised use of new technology.\\
+    Alternatively called the \textbf{unsupervised use of new technology}.\\
     All the experienced programmers are on holiday or busy.\\
     So they give the new technology to the summer students,\\
     who give it a go.\\
-    And if it runs they put it into production.
+    And if it runs they put it into production.\\
   }
   \note<3>{
     This last point is also a general point.\\
@@ -170,13 +174,13 @@
     Not because anyone thinks it's a good idea\\
     but because there is a commercial imperative.\\
     Having learnt from the prototype,\\
-    the plan was to throw it away and build it for real.\\
+    the plan was to throw it away and build it properly.\\
     But that never happens.\\
-    It is always put into production.
+    It is always put into production.\\
     \vfil
     Just in case you haven't lost all hope\\
     I would say that suck\\
-    is actually built into human psychology.
+    is actually built into human psychology.\\
   }
   % \note<4>{
   %   So,\\
@@ -224,18 +228,20 @@
     Because we are ignorant of it.\\
     We don't know what we don't know.\\
     But writing code is about explaining things in detail.\\
-    So it is no surprise that we struggle.
+    So it is no surprise that we struggle.\\
   }
   \note<2>{
     A couple of years ago we used a static analysis tool on our code.\\
-    To my surprise is said most of the code was good.\\
-    But it pointed to the five worst files.\\
-    Those were the files I spend most of my time working on.\\
-    Those will be the bits you remember.\\
-    So it turns out all code doesn't suck,\\
+    A gadget called `CodeScene' for anyone that is interested.\\
+    To my surprise is said most of our code was good.\\
+    But it did point to the five worst files.\\
+    Those are the files I spend most of my time working on.\\
+    Those will be the bits I remember.\\
+    So it turns out all code doesn't actually suck,\\
     I just feels like it.
     \vfil
-    Nevertheless, makes sense to tool up for sucky code.
+    Nevertheless, if that is what you are working on,\\
+    makes sense to tool up for sucky code.\\
   }
 \end{frame}
 
@@ -251,23 +257,24 @@
     \end{itemize}
   \note<1>{
     This is my adapted 6 step plan to work on sucky code.\\
-    The initial discovery is to find out how the code is actually used.\\
-    Then we can start to explore the code and find it's quirks.\\
+    An initial discovery phase is to find out how the code is actually used.\\
+    Then we can explore the code and find it's quirks.\\
     Our intermediate goal is to write some automated tests.\\
     To protect us from making changes that might break things.\\
     With the tests in place we can start to deconstruct the code.\\
     And target the bits that need attention.\\
     Using a feature flag will enable us to switch between\\
     old and new code.\\
-    Finally we can get on with the job of writing new code.
+    Finally we can get on with the job of writing new code.\\
     \vfil
-    I skipped taking control of the development environment.\\
-    At Zengenti we use ephemeral environments.\\
-    But that is whole other talk.
+    I have skipped the step about\\
+    getting control of the development environment.\\
+    We use ephemeral environments at Zengenti to keep things clean.\\
+    But that is a whole other talk, for another day.\\
   }
   \note<2>{
     As a demo I have and API with one end point.\\
-    Enjoy the squiggles, however, it does run.\\
+    You and enjoy the squiggles, however, it does run.\\
     \textbf{make app}\\
     Let's take and look and see what it does.\\
     \textbf{Open http://127.0.0.1:8000/docs}\\
@@ -276,28 +283,30 @@
     We really need to discover how the end point is used.\\
     So adding some logging is a good idea.\\
     \textbf{demo01log}\\
-    Feathers don't change until you have tests,\\
-    but sometimes you have to.\\
+    Michael Feathers says don't change any thing until you have tests,\\
+    but he admits that sometimes you have to add stuff like logging.\\
     \textbf{Try 2, 4 and 42}\\
-    We have a log of actual user behavior.
+    We have a log of actual user behavior.\\
   }
   \note<3>{
     Now we know how the end point is used.\\
-    We can start to explore the code.\\
+    We can start to explore the code a bit more.\\
     \textbf{Open tests/app.http}\\
     We can use http scripts to mimic the UI behavior.\\
     \textbf{demo2http01}\\
-    There's a Jetbrains client or in this case a VSCode extension.\\
+    There's a Jetbrains client for this or in this case a VSCode extension.\\
+    But you could equally well use a Jupyter notebook.\\
     \textbf{demo2http02}\\
-    This allows us to do some scripted investigation.\\
+    This allows us to do a more systematic investigation.\\
     Looks like a string is coming back.\\
     Not a number.\\
     \textbf{Fix inverted commas}\\
     We can get a feel for the behavior and quirks.\\
-    We might start to get an insight into the author's intent.\\
+    We might even start to get an insight into the author's intent.\\
   }
   \note<4>{
     With this knowledge we can write some proper automated tests.\\
+    The kind of tests we could use in a CI/CD pipeline.\\
     \textbf{Open tests/app\_test.py}\\
     These are the clamps that will hold the code in place.\\
     As Michael Feathers calls them.\\
@@ -337,7 +346,9 @@
     So lets rewrite the code.\\
     \textbf{demo6new01}\\
     This is actually a cut and paste from ChatGPT.\\
-    It is still a bit of a mess, but I am running out of time.
+    It is still a bit of a mess, but I am running out of time.\\
+    Things still work.\\
+    The code still sucks, but it sucks less.\\
   }
 \end{frame}
 
@@ -360,12 +371,12 @@
     Some is hard to read,\\
     some has been improved and some it half way between.\\
     But it often feels like we have three different code bases.\\
-    All jumbled up.
+    All jumbled up.\\
     \vfil
     It turns out the improving code is easy\\
     but managing the process is hard.\\
     Knowing which bits to improve really hard.\\
-    I have no answer to that, I am kind of hoping you do.
+    I have no answer to that, I am kind of hoping you do.\\
   }
 \end{frame}
 
@@ -382,7 +393,7 @@
     If you have other ideas how to work with sucky code,\\
     I'm all ears.\\
     Or if you have an idea how to manage the process,\\
-    Let's talk.
+    Let's talk.\\
   }
 \end{frame}
 
