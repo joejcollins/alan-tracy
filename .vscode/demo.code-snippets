@@ -89,7 +89,7 @@
     "Rewrite the function": {
         "prefix": "demo6new01",
         "body": [
-            "def describe_number(digit):",
+            "def asdf(digit):",
             "\t\"\"\"",
             "\tTakes a number, writes it to a file, and returns related information.",
             "\t\"\"\"",
